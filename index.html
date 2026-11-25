@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CSS Lab — Box Model &amp; Flexbox Responsivo (Aula 07)</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Elemento 01: Cabeçalho principal -->
+  <header id="el-01" class="cabecalho-flex">
+    <!-- Elemento 02: Marca / Identidade -->
+    <div id="el-02" class="marca-box">
+      <strong>CSS Lab</strong>
+      <span>Box Model &amp; Flexbox</span>
+    </div>
+
+    <!-- Elemento 03: Navegação principal -->
+    <nav id="el-03" class="menu-flex" aria-label="Navegação principal">
+      <a href="#secao-boxmodel">Box Model</a>
+      <a href="#secao-flexbox">Flexbox</a>
+      <a href="#secao-cards">Componentes</a>
+    </nav>
+
+    <!-- Elemento 04: Selo da Aula -->
+    <span id="el-04" class="selo-aula">Aula 07 — SENAI</span>
+  </header>
+
+  <main class="container-principal">
+
+    <!-- Seção Hero Flex -->
+    <section id="secao-boxmodel" class="hero-flex">
+      <!-- Elemento 05: Painel de introdução -->
+      <article id="el-05" class="painel-hero">
+        <h1>Domínio prático de Box Model e Flexbox</h1>
+        <p>
+          Demonstração prática com 20 elementos configurados individualmente nas
+          quatro camadas do Box Model (Content, Padding, Border e Margin) e
+          organizados de forma responsiva com 20 propriedades de Flexbox.
+        </p>
+      </article>
+
+      <!-- Elemento 06: Diagrama visual do Box Model -->
+      <aside id="el-06" class="diagrama-boxmodel">
+        <strong>Camadas do Box Model</strong>
+        <p>Margin → Border → Padding → Content</p>
+      </aside>
+    </section>
+
+    <!-- Barra de indicadores das 4 camadas -->
+    <section class="metricas-flex" aria-label="Camadas do Box Model">
+      <!-- Elemento 07 -->
+      <div id="el-07" class="card-metrica">
+        <strong>01. Content</strong>
+        <span>Largura, altura e conteúdo interno</span>
+      </div>
+      <!-- Elemento 08 -->
+      <div id="el-08" class="card-metrica">
+        <strong>02. Padding</strong>
+        <span>Espaçamento entre conteúdo e borda</span>
+      </div>
+      <!-- Elemento 09 -->
+      <div id="el-09" class="card-metrica">
+        <strong>03. Border</strong>
+        <span>Espessura, estilo e cor do contorno</span>
+      </div>
+      <!-- Elemento 10 -->
+      <div id="el-10" class="card-metrica">
+        <strong>04. Margin</strong>
+        <span>Distância externa entre elementos</span>
+      </div>
+    </section>
+
+    <!-- Galeria de demonstração de eixos e alinhamentos Flexbox -->
+    <section id="secao-flexbox" class="galeria-flex">
+      <!-- Elemento 11 -->
+      <article id="el-11" class="demo-box">
+        <h2>flex-direction: row</h2>
+        <p>Distribui os itens horizontalmente no eixo principal.</p>
+      </article>
+
+      <!-- Elemento 12 -->
+      <article id="el-12" class="demo-box">
+        <h2>justify-content: space-between</h2>
+        <p>Alinha extremidades e distribui o espaço livre igualmente.</p>
+      </article>
+
+      <!-- Elemento 13 -->
+      <article id="el-13" class="demo-box destaque-ordem">
+        <h2>order &amp; align-self</h2>
+        <p>Controle individual de ordem visual e alinhamento transversal.</p>
+      </article>
+
+      <!-- Elemento 14 -->
+      <article id="el-14" class="demo-box">
+        <h2>flex-wrap: wrap</h2>
+        <p>Permite quebra automática de linha em telas menores.</p>
+      </article>
+    </section>
+
+    <!-- Grade responsiva de cartões com flex-grow, flex-shrink e flex-basis -->
+    <section id="secao-cards" class="grade-cartoes-flex">
+      <!-- Elemento 15 -->
+      <article id="el-15" class="cartao-conceito">
+        <h3>CSS Externo (&lt;link&gt;)</h3>
+        <p>Separação limpa entre estrutura HTML5 e regras visuais reutilizáveis.</p>
+      </article>
+
+      <!-- Elemento 16 -->
+      <article id="el-16" class="cartao-conceito">
+        <h3>Seletores Class e ID</h3>
+        <p>Classes para padrões compartilhados e IDs para elementos exclusivos.</p>
+      </article>
+
+      <!-- Elemento 17 -->
+      <article id="el-17" class="cartao-conceito">
+        <h3>Gap, Row-Gap e Column-Gap</h3>
+        <p>Espaçamento consistente entre linhas e colunas sem margens extras.</p>
+      </article>
+
+      <!-- Elemento 18 -->
+      <article id="el-18" class="cartao-conceito">
+        <h3>Flex Shorthand (flex: 1 1 260px)</h3>
+        <p>Combina crescimento, encolhimento e tamanho base responsivo.</p>
+      </article>
+    </section>
+
+    <!-- Faixa de chamada final -->
+    <section class="cta-flex">
+      <!-- Elemento 19 -->
+      <div id="el-19" class="cta-texto">
+        <h2>Layouts Responsivos Mobile &amp; Desktop</h2>
+        <p>Redimensione a janela do navegador para observar a adaptação automática dos containers Flexbox.</p>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Elemento 20: Rodapé -->
+  <footer id="el-20" class="rodape-flex">
+    <span>Frameworks Front-end — Aula 07 (CSS, Box Model e Flexbox)</span>
+    <span>Curso de Análise e Desenvolvimento de Sistemas — SENAI</span>
+  </footer>
+
+</body>
+</html>
