@@ -9,8 +9,8 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: "Segoe UI", Roboto, Arial, sans-serif;
-  background-color: #0f172a;
+  font-family: "Inter", "Segoe UI", Roboto, Arial, sans-serif;
+  background-color: #0b1120;
   color: #f1f5f9;
   line-height: 1.5;
 }
@@ -22,6 +22,7 @@ a {
 }
 
 a:hover {
+  color: #bae6fd;
   text-decoration: underline;
 }
 
@@ -31,17 +32,29 @@ a:hover {
   padding: 0 16px;
 }
 
+.tag-el {
+  display: inline-block;
+  font-size: 0.74rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  color: #38bdf8;
+  background-color: rgba(56, 189, 248, 0.14);
+  padding: 2px 9px;
+  border-radius: 999px;
+  margin-bottom: 8px;
+}
+
 /* ==========================================================================
    PARTE 1 — 20 PROPRIEDADES E CONFIGURAÇÕES DE FLEXBOX
-   1.  display: flex
-   2.  display: inline-flex
-   3.  flex-direction: row
-   4.  flex-direction: column
-   5.  flex-direction: row-reverse
-   6.  flex-wrap: wrap
-   7.  flex-wrap: nowrap
-   8.  flex-flow: row wrap
-   9.  justify-content: space-between
+   01. display: flex
+   02. display: inline-flex
+   03. flex-direction: row
+   04. flex-direction: column
+   05. flex-direction: row-reverse
+   06. flex-wrap: wrap
+   07. flex-wrap: nowrap
+   08. flex-flow: row wrap
+   09. justify-content: space-between
    10. justify-content: center
    11. justify-content: space-around
    12. justify-content: space-evenly
@@ -51,8 +64,8 @@ a:hover {
    16. align-content: space-between
    17. gap / row-gap / column-gap
    18. flex-grow / flex-shrink / flex-basis (e shorthand flex)
-   19. align-self
-   20. order
+   19. align-self: center
+   20. order: -1
    ========================================================================== */
 
 .cabecalho-flex {
@@ -61,13 +74,14 @@ a:hover {
   flex-wrap: wrap;                    /* [Flex 06] flex-wrap: wrap */
   justify-content: space-between;     /* [Flex 09] justify-content: space-between */
   align-items: center;                /* [Flex 13] align-items: center */
-  gap: 16px;                          /* [Flex 17] gap */
+  gap: 16px;                          /* [Flex 17a] gap */
 }
 
 .marca-box {
   display: inline-flex;               /* [Flex 02] display: inline-flex */
   flex-direction: column;             /* [Flex 04] flex-direction: column */
   align-items: flex-start;            /* [Flex 15] align-items: flex-start */
+  justify-content: center;
 }
 
 .menu-flex {
@@ -75,7 +89,7 @@ a:hover {
   flex-wrap: nowrap;                  /* [Flex 07] flex-wrap: nowrap */
   justify-content: center;            /* [Flex 10] justify-content: center */
   align-items: center;
-  column-gap: 20px;                   /* [Flex 17b] column-gap */
+  column-gap: 22px;                   /* [Flex 17b] column-gap */
 }
 
 .hero-flex {
@@ -84,6 +98,13 @@ a:hover {
   justify-content: space-between;
   align-items: stretch;               /* [Flex 14] align-items: stretch */
   gap: 20px;
+}
+
+.diagrama-boxmodel {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
 }
 
 .metricas-flex {
@@ -139,24 +160,29 @@ a:hover {
 
 /* ==========================================================================
    PARTE 2 — 20 ELEMENTOS COM TODAS AS PROPRIEDADES DO BOX MODEL
-   (Content: width/min-height, Padding, Border e Margin)
+   Cada elemento (#el-01 a #el-20) define explicitamente:
+   - Content (width + min-height)
+   - Padding
+   - Border
+   - Margin
    ========================================================================== */
 
 /* Elemento 01 */
 #el-01 {
   width: calc(100% - 32px);
-  min-height: 76px;
+  max-width: 1148px;
+  min-height: 78px;
   padding: 16px 24px;
   border: 2px solid #1e293b;
-  margin: 16px auto 24px auto;
+  margin: 18px auto 24px auto;
   background-color: #111c33;
   border-radius: 14px;
 }
 
 /* Elemento 02 */
 #el-02 {
-  width: 210px;
-  min-height: 52px;
+  width: 215px;
+  min-height: 54px;
   padding: 8px 14px;
   border: 1px solid #38bdf8;
   margin: 4px;
@@ -166,9 +192,10 @@ a:hover {
 
 /* Elemento 03 */
 #el-03 {
-  width: auto;
-  min-height: 44px;
-  padding: 8px 18px;
+  width: 340px;
+  max-width: 100%;
+  min-height: 46px;
+  padding: 10px 18px;
   border: 1px solid #334155;
   margin: 4px 8px;
   background-color: #1e293b;
@@ -177,8 +204,8 @@ a:hover {
 
 /* Elemento 04 */
 #el-04 {
-  width: 160px;
-  min-height: 38px;
+  width: 185px;
+  min-height: 40px;
   padding: 8px 12px;
   border: 1px dashed #38bdf8;
   margin: 4px;
@@ -186,7 +213,7 @@ a:hover {
   background-color: rgba(56, 189, 248, 0.12);
   color: #bae6fd;
   border-radius: 999px;
-  font-size: 0.85rem;
+  font-size: 0.84rem;
   font-weight: 700;
 }
 
@@ -194,7 +221,7 @@ a:hover {
 #el-05 {
   flex: 2 1 420px;
   width: 100%;
-  min-height: 180px;
+  min-height: 190px;
   padding: 24px 28px;
   border: 2px solid #0284c7;
   margin: 8px 0 20px 0;
@@ -202,14 +229,22 @@ a:hover {
   border-radius: 16px;
 }
 
-/* Elemento 06 */
+/* Elemento 06 (demonstração também com propriedades longhand do Box Model) */
 #el-06 {
   flex: 1 1 260px;
   width: 100%;
-  min-height: 180px;
-  padding: 24px 20px;
-  border: 3px double #f59e0b;
-  margin: 8px 0 20px 0;
+  min-height: 190px;
+  padding-top: 24px;
+  padding-right: 22px;
+  padding-bottom: 24px;
+  padding-left: 22px;
+  border-width: 3px;
+  border-style: double;
+  border-color: #f59e0b;
+  margin-top: 8px;
+  margin-right: 0;
+  margin-bottom: 20px;
+  margin-left: 0;
   background-color: #1f2937;
   border-radius: 16px;
 }
@@ -218,7 +253,7 @@ a:hover {
 #el-07 {
   flex: 1 1 220px;
   width: 220px;
-  min-height: 105px;
+  min-height: 112px;
   padding: 16px 18px;
   border: 2px solid #22c55e;
   margin: 6px 0 20px 0;
@@ -230,7 +265,7 @@ a:hover {
 #el-08 {
   flex: 1 1 220px;
   width: 220px;
-  min-height: 105px;
+  min-height: 112px;
   padding: 18px 20px;
   border: 2px solid #3b82f6;
   margin: 6px 0 20px 0;
@@ -242,7 +277,7 @@ a:hover {
 #el-09 {
   flex: 1 1 220px;
   width: 220px;
-  min-height: 105px;
+  min-height: 112px;
   padding: 16px 20px;
   border: 3px solid #a855f7;
   margin: 6px 0 20px 0;
@@ -254,7 +289,7 @@ a:hover {
 #el-10 {
   flex: 1 1 220px;
   width: 220px;
-  min-height: 105px;
+  min-height: 112px;
   padding: 16px 20px;
   border: 2px solid #f97316;
   margin: 6px 0 20px 0;
@@ -266,7 +301,7 @@ a:hover {
 #el-11 {
   flex: 1 1 240px;
   width: 240px;
-  min-height: 140px;
+  min-height: 150px;
   padding: 18px;
   border: 1px solid #475569;
   margin: 6px 0 18px 0;
@@ -278,7 +313,7 @@ a:hover {
 #el-12 {
   flex: 1 1 240px;
   width: 240px;
-  min-height: 140px;
+  min-height: 150px;
   padding: 20px;
   border: 1px solid #475569;
   margin: 6px 0 18px 0;
@@ -290,7 +325,7 @@ a:hover {
 #el-13 {
   flex: 1 1 240px;
   width: 240px;
-  min-height: 140px;
+  min-height: 150px;
   padding: 20px;
   border: 2px solid #38bdf8;
   margin: 6px 0 18px 0;
@@ -302,7 +337,7 @@ a:hover {
 #el-14 {
   flex: 1 1 240px;
   width: 240px;
-  min-height: 140px;
+  min-height: 150px;
   padding: 18px;
   border: 1px solid #475569;
   margin: 6px 0 18px 0;
@@ -313,7 +348,7 @@ a:hover {
 /* Elemento 15 */
 #el-15 {
   width: 250px;
-  min-height: 135px;
+  min-height: 145px;
   padding: 18px 20px;
   border: 1px solid #334155;
   margin: 4px 0 18px 0;
@@ -324,7 +359,7 @@ a:hover {
 /* Elemento 16 */
 #el-16 {
   width: 250px;
-  min-height: 135px;
+  min-height: 145px;
   padding: 18px 20px;
   border: 1px solid #334155;
   margin: 4px 0 18px 0;
@@ -335,7 +370,7 @@ a:hover {
 /* Elemento 17 */
 #el-17 {
   width: 250px;
-  min-height: 135px;
+  min-height: 145px;
   padding: 18px 20px;
   border: 1px solid #334155;
   margin: 4px 0 18px 0;
@@ -346,7 +381,7 @@ a:hover {
 /* Elemento 18 */
 #el-18 {
   width: 250px;
-  min-height: 135px;
+  min-height: 145px;
   padding: 18px 20px;
   border: 1px solid #334155;
   margin: 4px 0 18px 0;
@@ -357,8 +392,8 @@ a:hover {
 /* Elemento 19 */
 #el-19 {
   width: 100%;
-  min-height: 110px;
-  padding: 22px 28px;
+  min-height: 125px;
+  padding: 24px 28px;
   border: 2px solid #6366f1;
   margin: 10px 0 28px 0;
   text-align: center;
@@ -369,11 +404,12 @@ a:hover {
 /* Elemento 20 */
 #el-20 {
   width: calc(100% - 32px);
+  max-width: 1148px;
   min-height: 68px;
   padding: 16px 24px;
   border: 1px solid #1e293b;
-  margin: 8px auto 24px auto;
-  background-color: #0b1120;
+  margin: 8px auto 28px auto;
+  background-color: #0f172a;
   color: #94a3b8;
   border-radius: 12px;
   font-size: 0.9rem;
@@ -382,10 +418,12 @@ a:hover {
 .card-metrica span,
 .demo-box p,
 .cartao-conceito p,
-.painel-hero p {
+.painel-hero p,
+.diagrama-boxmodel p {
   display: block;
   margin-top: 6px;
   color: #cbd5e1;
+  font-size: 0.92rem;
 }
 
 .demo-box h2,
@@ -393,6 +431,10 @@ a:hover {
 .painel-hero h1,
 .cta-texto h2 {
   margin: 0;
+}
+
+.demo-box h2 {
+  font-size: 1.05rem;
 }
 
 /* ==========================================================================
@@ -413,6 +455,13 @@ a:hover {
 
   .galeria-flex {
     flex-direction: column;
+  }
+
+  #el-11,
+  #el-12,
+  #el-13,
+  #el-14 {
+    width: 100%;
   }
 
   .rodape-flex {
